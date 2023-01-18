@@ -1,0 +1,32 @@
+<br>
+<br>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 style="text-align: center;">CONFIRM DELIVERY</h3>
+<br>
+<br>
+
+            <form [formGroup]="ConfirmProductForm">
+                Product Name
+                <div class="form-group">
+                    <input type="text" formControlName="product_name" class="form-control" readonly />
+                </div>
+                <br>
+                Product Price
+
+                <div class="form-group">
+                    <input type="text" formControlName="product_price" class="form-control"   readonly/>
+                </div>
+                <br>
+               
+                <div class="form-group">
+                    <br>
+                    <button type="submit" (click)="onSubmit()" class="btn btn-danger" rounded="true">Confirm Delivery</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

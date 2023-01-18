@@ -1,0 +1,316 @@
+<!--<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 style="text-align: center;">CUSTOMER REGISTERATION</h3>
+            <form [formGroup]="CustomerRegisterForm">
+                Customer Name
+                <div class="form-group">
+                    <input type="text" formControlName="customer_name" class="form-control" placeholder="Enter the Name" />
+                </div>
+                <br>
+                Customer Address
+
+                <div class="form-group">
+                    <input type="text" formControlName="customer_address" class="form-control"  placeholder="Enter the Address" />
+                </div>
+                <br>
+                Customer District
+
+                <div class="form-group">
+                    <select formControlName="customer_district" class="form-control" id="sel1">                    
+
+                    <option>Trivandrum</option>
+
+                    <option>Kollam</option>
+
+                    <option>Eranakulam</option>
+
+                    <option>Trissur</option>
+
+                    <option>Kozhikode</option>
+
+                    <option>Kannur</option>
+                    <option>Palakkad</option>
+                    <option>Alappuzha</option>
+                    <option>Malappuram</option>
+                    <option>Kottayam</option>
+                    <option>Pathanamthitta</option>
+                    <option>Idukki</option>
+                    <option>Wayanad</option>
+
+                  </select>              
+                  </div>
+                <br>
+                Customer Mobile
+
+                <div class="form-group">
+                    <input type="text" formControlName="customer_mobile" class="form-control"  placeholder="Enter the Mobile Number" />
+                </div>
+                <br>
+                Customer Email
+
+                <div class="form-group">
+                    <input type="text" formControlName="customer_email" class="form-control"  placeholder="Enter the  Email" />
+                </div>
+                <br>
+                Customer Username
+
+                <div class="form-group">
+                    <input type="text" formControlName="customer_username" class="form-control"  placeholder="Enter the Username" />
+                </div>
+                <br>
+                Customer Password
+
+                <div class="form-group">
+                    <input type="text" formControlName="customer_password" class="form-control"  placeholder="Enter the Password" />
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <br>
+                    <button type="submit" (click)="OnSubmit()" class="btn btn-danger" rounded="true">Save Data</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+<section id="contact" class="contact">
+
+
+
+    <div class="container" data-aos="fade-up">
+
+        <br>
+
+        <br>
+
+
+
+        <h2 style="text-align: center;">CUSTOMER REGISTRATION</h2>
+
+
+
+
+
+        <form [formGroup]="CustomerRegisterForm" class="php-email-form p-3 p-md-4">
+
+            <div class="row">
+
+                <div class="col-xl-6 form-group">
+
+                    <input type="text" name="name" formControlName="customer_name" class="form-control" id="name" placeholder="Enter Your Name"
+
+                        required>
+                        <div *ngIf="submitted&&CustomerRegisterForm.controls.customer_name.errors" class="text-danger">
+
+                            <div *ngIf="submitted&&CustomerRegisterForm.controls.customer_name.errors.required">
+        
+                                Enter Name
+        
+                            </div>
+        
+                        </div>
+
+                </div>
+
+                <div class="col-xl-6 form-group">
+
+                    <input type="email" class="form-control" formControlName="customer_email" name="email" id="email" placeholder="Enter Your Email" required>
+                    <div *ngIf="submitted&&CustomerRegisterForm.controls.customer_email.errors" class="text-danger">
+
+                        <div *ngIf="submitted&&CustomerRegisterForm.controls.customer_email.errors.required">
+    
+                            Enter Email
+    
+                        </div>
+                        <div *ngIf="submitted&&CustomerRegisterForm.controls.customer_email.errors.email">
+    
+                            Invalid Email
+    
+                        </div>
+    
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-xl-6 form-group">
+
+                    <input type="text" class="form-control" formControlName="customer_mobile" name="" id="" placeholder="Enter Your Phone.No"
+
+                        required>
+                         <div *ngIf="submitted&&CustomerRegisterForm.controls.customer_mobile.errors" class="text-danger">
+
+                            <div *ngIf="submitted&&CustomerRegisterForm.controls.customer_mobile.errors.required">
+        
+                                Enter Phone Number
+        
+                            </div>
+                            <div *ngIf="submitted&&CustomerRegisterForm.controls.customer_mobile.errors.pattern">
+        
+                                Invalid Phone Number
+        
+                            </div>
+                        </div>
+
+                </div>
+
+                <div class="col-xl-6 form-group">
+
+                    <input type="text" class="form-control" formControlName="customer_address" name="" id="" placeholder="Enter Your Address"
+
+                        required>
+                        <div *ngIf="submitted&&CustomerRegisterForm.controls.customer_address.errors" class="text-danger">
+
+                            <div *ngIf="submitted&&CustomerRegisterForm.controls.customer_address.errors.required">
+        
+                                Enter Address
+        
+                            </div>
+        
+                        </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+            <div class="col-xl-6 form-group">
+
+                <select formControlName="customer_district" class="form-control" id="sel1" >  
+
+                    <option>Select Your Districts</option>
+
+                 
+
+
+
+
+
+                    <option>Trivandrum</option>
+
+
+
+
+
+                    <option>Kollam</option>
+
+
+
+
+
+                    <option>Eranakulam</option>
+
+
+
+
+
+                    <option>Trissur</option>
+
+
+
+
+
+                 
+
+
+                    <option>Alappuzha</option>
+
+
+                    <option>Kottayam</option>
+
+
+
+                    <option>Pathanamthitta</option>
+
+
+
+                
+
+                  </select>    
+                  <div *ngIf="submitted&&CustomerRegisterForm.controls.customer_district.errors" class="text-danger">
+
+                    <div *ngIf="submitted&&CustomerRegisterForm.controls.customer_district.errors.required">
+
+                        Enter District
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+           <!---- <div class="col-xl-6 form-group">
+
+                <input type="email" class="form-control" name="email" id="email" placeholder="Enter you location" required>
+
+            </div>-->
+
+        </div>
+
+            <div class="row">
+
+                <div class="col-xl-6 form-group">
+
+                    <input type="text" class="form-control" formControlName="customer_username" name="" id="" placeholder="User Name" required>
+                    <div *ngIf="submitted&&CustomerRegisterForm.controls.customer_username.errors" class="text-danger">
+
+                        <div *ngIf="submitted&&CustomerRegisterForm.controls.customer_username.errors.required">
+    
+                            Enter UserName
+    
+                        </div>
+    
+                    </div>
+                </div>
+
+                <div class="col-xl-6 form-group">
+
+                    <input type="password" class="form-control" formControlName="customer_password" name="" id="" placeholder="Password" required>
+                    <div *ngIf="submitted&&CustomerRegisterForm.controls.customer_password.errors" class="text-danger">
+
+                        <div *ngIf="submitted&&CustomerRegisterForm.controls.customer_password.errors.required">
+    
+                            Enter Password
+    
+                        </div>
+    
+                    </div>
+                </div>
+
+            </div>
+
+            <!----<div class="form-group">
+
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+
+            </div>-->
+
+            <div class="my-3">
+
+                <div class="loading">Loading</div>
+
+                <div class="error-message"></div>
+
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+            </div>
+
+            <div class="text-center"><button type="submit" (click)="OnSubmit()" >Register</button></div>
+
+        </form>
+    </div>
+    <br>
+    <br>
+    <h1> <font color="white"> <marquee bgcolor="Grey"> Currently we have service on Trivandrum,Kollam,Trissur,Eranakulam,Kottayam,Alappuzha......For more details, please feel free to reach as via e-mail, facebook or whatsapp....</marquee></font></h1>
+
+
+</section>

@@ -1,0 +1,127 @@
+<!--<section class="ftco-section">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+        
+
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-7 col-lg-5">
+
+                <div class="wrap">
+
+                    <div class="img" style="background-image: url(assets/img/lo.jpg);"></div>
+
+                    <div class="login-wrap p-4 p-md-5">
+
+                  <div class="d-flex">
+
+                      <div class="w-100">
+
+                          <h3 class="mb-4">Sign In</h3>
+
+                      </div>
+
+                            <div class="w-100">
+
+                                <p class="social-media d-flex justify-content-end">
+
+                                    <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
+
+                                    <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
+
+                                </p>
+
+                            </div>
+
+                  </div>
+<div class="container login-container">
+    <div class="row">
+        <div class="col-md-6 login-form-2">
+            <h3 style="text-align: center;">Login</h3>
+            <form [formGroup]='LoginFormGroup'>
+                <div class="form-group">
+                    <input type="text" formControlName='agency_username' class="form-control"
+                     placeholder="Your Username" />
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="password" formControlName='agency_password' class="form-control"
+                     placeholder="Your Password " />
+                </div>
+                <div class="form-group">
+                    <label></label>
+                    <br>
+                    <button type="submit" (click)="OnSubmit()" class="btn btn-danger" 
+                    rounded="true">
+                        LOGIN</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> 
+-->
+
+
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+            class="img-fluid" alt="Sample image">
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+            <div class="w-100">
+        <br>
+        <br>
+        <br>
+
+
+                <h3 class="mb-4">Sign In</h3>
+
+            </div>
+
+                  <form [formGroup]='LogincustomerFormGroup'>
+                    <div class="form-group">
+                        <input type="text" formControlName='customer_username' class="form-control"
+                         placeholder="Your Username" />
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="password" formControlName='customer_password' class="form-control"
+                         placeholder="Your Password " />
+                    </div>
+                    <div class="form-group">
+                        <label></label>
+                        <br>
+                        <button type="submit" (click)="OnSubmit()" class="btn btn-danger" 
+                        rounded="true">
+                            LOGIN</button>
+                    </div>
+                </form>
+
+              <p class="text-center">Not a member?  <a class="nav-link" [routerLink]="['/GuestMaster/CustomerRegistration']">Sign Up</a></p>
+            </div>
+
+          </div>
+
+            </div>
+            <br>
+            <br>
+            <div
+    class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+    <!-- Copyright -->
+    <div class="text-white mb-3 mb-md-0">
+      @ NeST Digital
+    </div>
+    </div>
+
+       </section>
+       

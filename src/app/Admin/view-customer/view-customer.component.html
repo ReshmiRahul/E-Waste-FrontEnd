@@ -1,0 +1,48 @@
+
+<div class="container mt-3">
+    <h1>OUR CUSTOMERS</h1>
+  
+    <table class="table">
+      <thead>
+        <th>No</th>
+  
+        <th>Customer Name</th>
+  
+        <th>Customer Address</th>
+  
+        <th>Customer District</th>
+        <th>Customer Mobile</th>
+  
+         
+        <th>Customer Email</th>
+        <th>Status</th>
+  
+        <th>Confirmation</th>
+        <th>Delete</th>
+      </thead>
+  
+      <tr *ngFor="let item of Dataarray; let i = index" class="table-primary">
+        <td>{{ i + 1 }}</td>
+  
+        <td>{{ item.customer_name }}</td>
+  
+        <td>{{ item.customer_address }}</td>
+        <td>{{ item.customer_district }}</td>
+  
+        <td>{{ item.customer_mobile }}</td>
+  
+        <td>{{ item.customer_email }}</td>
+        <td>{{item.customer_status}}</td>
+  
+        <td>
+          <a [routerLink]="['/AdminMaster/ConfirmCustomer', item.customer_id]">Confirmation</a>
+        </td>
+        <td>
+          <a [routerLink]="['/AdminMaster/DeleteCustomer', item.customer_id]"
+            >Delete</a
+          >
+        </td>
+      </tr>
+    </table>
+  </div>
+  

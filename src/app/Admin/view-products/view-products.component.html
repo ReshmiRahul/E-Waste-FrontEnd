@@ -1,0 +1,45 @@
+<br>
+<br>
+<div >
+    <h1>OUR PRODUCTS</h1>
+<br>
+<br>
+
+  
+    <table class="table table-dark">
+      <thead>
+        <th>No</th>
+  
+        <th>Product Name</th>
+  
+        <th>Product Description</th>
+  
+        <th>Product Price</th>
+        <th>Update</th>
+
+        
+        <th>Delete</th>
+
+      </thead>
+  
+      <tr *ngFor="let item of Dataarray; let i = index" class="table-primary">
+        <td>{{ i + 1 }}</td>
+  
+        <td>{{ item.product_name }}</td>
+  
+        <td>{{ item.product_description }}</td>
+        <td>{{ item.product_price }}</td>
+        <td>
+          <a [routerLink]="['/AdminMaster/EditProduct', item.product_id]"> Update</a>
+
+        </td>
+  
+                <td>
+          <a [routerLink]="['/AdminMaster/DeleteProduct', item.product_id]"> Delete</a>
+
+        </td>
+      
+      </tr>
+    </table>
+  </div>
+  

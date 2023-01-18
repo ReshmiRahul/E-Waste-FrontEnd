@@ -1,0 +1,37 @@
+
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 style="text-align: center;">CONFIRM CUSTOMER</h3>
+<br>
+<br>
+
+            <form [formGroup]="ConfirmcustomerForm">
+                Customer Status
+                <div class="form-group">
+                    <select formControlName="customer_status" class="form-control" id="sel1">                    
+
+                    <option  >Confirmed</option>
+
+                    <option >Not Confirmed</option>
+                  </select>              
+                  </div>
+                <br>
+
+                <div class="form-group">
+                    <br>
+                    <button type="submit" (click)="onSubmit()"  class="btn btn-danger" rounded="true">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

@@ -1,0 +1,28 @@
+<h1>VIEW WEATHER DATA</h1>
+
+<table border="1">
+
+    <thead>
+
+        <th>Date</th>
+
+        <th>Temperature C </th>
+
+        <th>Temperature F</th>
+
+        <th>Summary</th>
+
+    </thead>
+
+    <tr *ngFor="let item of Dataarray">
+
+        <td> {{item.date}}</td>
+
+        <td>{{item.temperatureC}}</td>
+
+        <td> {{item.temperatureF}} </td>
+        <td>{{item.summary}}</td>
+
+    </tr>
+
+</table>

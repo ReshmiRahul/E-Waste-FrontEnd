@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 style="text-align: center;">DELETE PRODUCT</h3>
+            <form [formGroup]="DeleteProductForm">
+                Product Name
+                <div class="form-group">
+                    <input type="text" formControlName="product_name" class="form-control" readonly />
+                </div>
+                <br>
+                Product Price
+
+                <div class="form-group">
+                    <input type="text" formControlName="product_price" class="form-control"  readonly/>
+                </div>
+                <br>
+               
+                <div class="form-group">
+                    <br>
+                    <button type="submit" (click)="onSubmit()" class="btn btn-danger" rounded="true">Delete Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<br>
+<br><br>
+<br><br>
+
+
+<div class="container mt-3">
+    <h1>MY PROFILE</h1>
+    <br>
+    <br>
+    <table class="table table-dark">
+     
+      <tr *ngFor="let item of Dataarray; let i = index" class="table-primary">
+        <td>Agency Name</td>
+        <td>{{ item.agency_name }}</td>
+</tr>
+<tr *ngFor="let item of Dataarray; let i = index" class="table-primary" >
+    <td >Agency Address</td>
+    <td>{{ item.agency_address }}</td>
+</tr>
+<tr *ngFor="let item of Dataarray; let i = index" class="table-primary">
+    <td>Agency District</td>
+    <td>{{ item.agency_district }}</td>
+</tr>
+<tr *ngFor="let item of Dataarray; let i = index" class="table-primary">
+    <td>Agency Mobile</td>
+    <td>{{ item.agency_mobile }}</td>
+</tr>
+<tr *ngFor="let item of Dataarray; let i = index" class="table-primary">
+    <td>Agency Email</td>
+    <td>{{ item.agency_email }}</td>
+</tr>
+</table>
+<br>
+<br>
+  </div>
+  

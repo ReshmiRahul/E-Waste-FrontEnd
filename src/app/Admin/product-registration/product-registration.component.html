@@ -1,0 +1,84 @@
+<br>
+<br>
+<div class="container">
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <h3 style="text-align: center;">PRODUCT REGISTRATION</h3>
+<br>
+<br>
+
+
+        <form  [formGroup]='ProductRegisterForm'>
+
+          Product Name
+
+          <div >
+
+            <input type="text" formControlName="product_name" class="form-control" placeholder="Enter the Product Name" />
+            <div *ngIf="submitted&&ProductRegisterForm.controls.product_name.errors" class="text-danger">
+
+              <div *ngIf="submitted&&ProductRegisterForm.controls.product_name.errors.required">
+      
+                  Enter Name of the product
+      
+              </div>
+      
+          </div>
+          </div>
+
+          <br>
+
+          product Description
+
+          <div class="form-group">
+
+            <input type="text" formControlName="product_description" class="form-control" placeholder="Enter the Product Description" />
+            <div *ngIf="submitted&&ProductRegisterForm.controls.product_description.errors" class="text-danger">
+
+              <div *ngIf="submitted&&ProductRegisterForm.controls.product_description.errors.required">
+      
+                  Enter Description
+      
+              </div>
+      
+          </div>
+          </div>
+
+          <br>
+
+          Product Price
+
+          <div class="form-group">
+
+            <input type="text" formControlName="product_price" class="form-control" placeholder="Enter the Product Price" />
+            <div *ngIf="submitted&&ProductRegisterForm.controls.product_price.errors" class="text-danger">
+
+              <div *ngIf="submitted&&ProductRegisterForm.controls.product_price.errors.required">
+      
+                  Enter Price
+      
+              </div>
+      
+          </div>
+          </div>
+
+          <br>
+        
+          <div class="form-group">
+
+            <br>
+
+            <button type="submit" (click)="OnSubmit()"  class="btn btn-danger" rounded="true">Save Data</button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>

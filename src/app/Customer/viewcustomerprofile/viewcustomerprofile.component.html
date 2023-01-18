@@ -1,0 +1,40 @@
+<br>
+<br><br>
+<br><br>
+
+
+<div class="container mt-3">
+    <h1>MY PROFILE</h1>
+    <br>
+    <br>
+    <table class="table table-dark">
+     
+      <tr *ngFor="let item of Dataarray; let i = index" class="table-primary">
+        <td>Name</td>
+        <td>{{ item.customer_name }}</td>
+</tr>
+<tr *ngFor="let item of Dataarray; let i = index" class="table-primary" >
+    <td >Address</td>
+    <td>{{ item.customer_address }}</td>
+</tr>
+<tr *ngFor="let item of Dataarray; let i = index" class="table-primary">
+    <td>District</td>
+    <td>{{ item.customer_district }}</td>
+</tr>
+<tr *ngFor="let item of Dataarray; let i = index" class="table-primary">
+    <td>Mobile Number</td>
+    <td>{{ item.customer_mobile }}</td>
+</tr>
+<tr *ngFor="let item of Dataarray; let i = index" class="table-primary">
+    <td>Email ID</td>
+    <td>{{ item.customer_email }}</td>
+</tr>
+<tr *ngFor="let item of Dataarray; let i = index" class="table-primary">
+    <td>Edit Profile</td>
+   <td> <a [routerLink]="['/CustomerMaster/EditMyProfile', item.customer_id]">Edit</a></td>
+</tr>
+</table>
+<br>
+<br>
+  </div>
+  

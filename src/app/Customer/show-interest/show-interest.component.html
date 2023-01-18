@@ -1,0 +1,32 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 style="text-align: center;">R u interested?</h3>
+            <form [formGroup]="ConfirmInterestForm">
+                Status
+                <div class="form-group">
+                    <select formControlName="product_interest" class="form-control" id="sel1">                    
+
+                    <option  >Interested</option>
+
+                    <option >Not Interested</option>
+                  </select>              
+                  </div>
+                <br>
+
+                <div class="form-group">
+                    <br>
+                    <button type="submit" (click)="onSubmit()"  class="btn btn-danger" rounded="true">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

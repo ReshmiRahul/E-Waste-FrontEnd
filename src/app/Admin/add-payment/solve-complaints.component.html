@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 style="text-align: center;">Complaint Status Updation</h3>
+            <form [formGroup]="SolveCompForm">
+                Complaint Status
+                <div class="form-group">
+                    <select formControlName="complaint_status" class="form-control" id="sel1">                    
+
+                    <option  >Solved</option>
+
+                    <option >Not Solved</option>
+                  </select>              
+                  </div>
+                <br>
+
+                <div class="form-group">
+                    <br>
+                    <button type="submit" (click)="onSubmit()"  class="btn btn-danger" rounded="true">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

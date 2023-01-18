@@ -1,0 +1,53 @@
+<div class="container mt-3">
+  <h1>OUR AGENCIES</h1>
+  <br>
+  <br>
+
+  <table class="table table-dark">
+    <thead>
+      <th>No</th>
+
+      <th>Agency Name</th>
+
+      <th>Agency Address</th>
+
+      <th>Agency District</th>
+      <th>Agency Mobile</th>
+
+      <th>Agency Location</th>
+
+      <th>Agency Email</th>
+      <th>Edit</th>
+
+      
+      <th>Delete</th>
+    </thead>
+
+    <tr *ngFor="let item of Dataarray; let i = index" class="table-primary">
+      <td>{{ i + 1 }}</td>
+
+      <td>{{ item.agency_name }}</td>
+
+      <td>{{ item.agency_address }}</td>
+      <td>{{ item.agency_district }}</td>
+
+      <td>{{ item.agency_mobile }}</td>
+      <td>{{ item.agency_location }}</td>
+
+      <td>{{ item.agency_email }}</td>
+      <td>
+        <a [routerLink]="['/AdminMaster/updateagency', item.agency_id]"
+          >Edit</a
+        >
+      </td>
+   
+            <td>
+        <a [routerLink]="['/AdminMaster/deleteagency', item.agency_id]"
+          >Delete</a
+        >
+      </td>
+    </tr>
+  </table>
+</div>
+<br>
+<br>

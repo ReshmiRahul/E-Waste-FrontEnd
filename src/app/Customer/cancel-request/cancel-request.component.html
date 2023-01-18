@@ -1,0 +1,43 @@
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>Cancel E-waste Request</h1>
+<br>
+<table class="table table-striped table-dark">
+            <thead>
+          <th>#</th>
+    
+    
+          <th>Type of Ewaste</th>
+    
+          <th>Ewaste Description</th>
+          
+          <th>Cancel</th>
+        
+    
+         
+        </thead>
+    
+        <tr *ngFor="let item of Dataarray; let i = index" class="table-primary">
+          <td>{{ i + 1 }}</td>
+    
+          <td>{{ item.ewaste_type}}</td>
+    
+          <td>{{ item.ewaste_description }}</td>
+          <td>
+            <a [routerLink]="['/CustomerMaster/CancelDustbin', item.ewaste_id]">Cancel Request</a></td>
+    
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>

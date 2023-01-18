@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 style="text-align: center;">AGENCY REGISTERATION</h3>
+            <form [formGroup]="EditAgencyForm">
+                Agency Name
+                <div class="form-group">
+                    <input type="text" formControlName="agency_name" class="form-control" placeholder="Enter the Agent Name" />
+                </div>
+                <br>
+                Agency Address
+
+                <div class="form-group">
+                    <input type="text" formControlName="agency_address" class="form-control"  placeholder="Enter the Agency Address" />
+                </div>
+                <br>
+                Agency District
+                <div class="form-group">
+                    <input type="text" formControlName="agency_district" class="form-control"  placeholder="Enter the Agency Mobile" />
+                </div>
+
+                
+                <br>
+                Agency Mobile
+
+                <div class="form-group">
+                    <input type="text" formControlName="agency_mobile" class="form-control"  placeholder="Enter the Agency Mobile" />
+                </div>
+                <br>
+                Agency Location
+
+                <div class="form-group">
+                    <input type="text" formControlName="agency_location" class="form-control"  placeholder="Enter the Agency Location" />
+                </div>
+                <br>
+                Agency Email
+
+                <div class="form-group">
+                    <input type="text" formControlName="agency_email" class="form-control"  placeholder="Enter the Agency Email" />
+                </div>
+                <br>
+                Agency Username
+
+                <div class="form-group">
+                    <input type="text" formControlName="agency_username" class="form-control"  placeholder="Enter the Agency Username" />
+                </div>
+                <br>
+                Agency Password
+
+                <div class="form-group">
+                    <input type="text" formControlName="agency_password" class="form-control"  placeholder="Enter the Agency Password" />
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <br>
+                    <button type="submit" (click)="onSubmit()" class="btn btn-danger" rounded="true">Save Data</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

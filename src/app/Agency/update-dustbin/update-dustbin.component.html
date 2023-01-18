@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 style="text-align: center;">UPDATE DUSTBIN DETAILS</h3>
+            <form [formGroup]="EditEwasteForm">
+                Total Kilo
+                <div class="form-group">
+                    <input type="text" formControlName="ewaste_kilo" class="form-control"  />
+                </div>
+                <br>
+                Per Kilo Rs
+
+                <div class="form-group">
+                    <input type="text" formControlName="ewaste_perkilo_Rs" class="form-control"  />
+                </div>
+                <br>
+                Total Amount Paid
+
+                <div class="form-group">
+                    <input type="text" formControlName="ewaste_wallet" class="form-control"  />
+                </div>
+                <br>
+                Status
+                <div class="form-group">
+                    <select formControlName="ewaste_status" class="form-control" id="sel1">                    
+
+                    <option  >Cleaned</option>
+
+                    <option >Not Cleaned</option>
+                  </select>              
+                  </div>
+               
+                <div class="form-group">
+                    <br>
+                    <button type="submit" (click)="onSubmit()" class="btn btn-danger" rounded="true">Update Dustbin</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

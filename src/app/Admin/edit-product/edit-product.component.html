@@ -1,0 +1,39 @@
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 style="text-align: center;">UPDATE PRODUCT DETAILS</h3>
+<br>
+<br>
+
+            <form [formGroup]="EditProductForm">
+                Product Name
+                <div class="form-group">
+                    <input type="text" formControlName="product_name" class="form-control"  />
+                </div>
+                <br>
+                Product Description
+
+                <div class="form-group">
+                    <input type="text" formControlName="product_description" class="form-control"  />
+                </div>
+                <br>
+                Product Price
+
+                <div class="form-group">
+                    <input type="text" formControlName="product_price" class="form-control"  />
+                </div>
+                <br>
+                <div class="form-group" hidden>
+                    <input type="text" formControlName="product_interest" class="form-control"  />
+                </div>
+               
+                <div class="form-group">
+                    <br>
+                    <button type="submit" (click)="onSubmit()" class="btn btn-danger" rounded="true">Update Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

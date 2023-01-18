@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 style="text-align: center;">AGENCY REGISTERATION</h3>
+            <form [formGroup]="ConfirmAgencyForm">
+                Agency Status
+                <div class="form-group">
+                    <select formControlName="agency_status" class="form-control" id="sel1">                    
+
+                    <option  >Confirmed</option>
+
+                    <option >Not Confirmed</option>
+                  </select>              
+                  </div>
+                <br>
+
+                <div class="form-group">
+                    <br>
+                    <button type="submit" (click)="onSubmit()"  class="btn btn-danger" rounded="true">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

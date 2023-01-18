@@ -1,0 +1,32 @@
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 style="text-align: center;">Confirm Cancellation</h3>
+            <form [formGroup]="CancelRequestForm">
+                Status
+                <div class="form-group">
+                    <select formControlName="ewaste_status" class="form-control" id="sel1">                    
+
+                    <option  >Cancel</option>
+
+                    <option >Not Cleaned</option>
+                  </select>              
+                  </div>
+                <br>
+
+                <div class="form-group">
+                    <br>
+                    <button type="submit" (click)="onSubmit()"  class="btn btn-danger" rounded="true">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

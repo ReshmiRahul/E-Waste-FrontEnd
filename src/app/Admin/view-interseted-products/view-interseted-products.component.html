@@ -1,0 +1,50 @@
+<br>
+<br>
+<br>
+<div class="container mt-3">
+    <h1>REQUESTED DELIVERIES</h1>
+<br>
+<br>
+
+  
+    <table class="table">
+      <thead>
+        <th>No</th>
+  
+        <th>Product Name</th>
+  
+        <th>Product Description</th>
+  
+        <th>Product Price</th>
+        <th>Customer Name</th>
+  
+        <th>Customer Address</th>
+  
+        <th>Customer PhoneNumber</th>
+
+       
+        <th>Interest</th>
+        <th>Confirmation</th>
+
+      </thead>
+  
+      <tr *ngFor="let item of Dataarray; let i = index" class="table-primary">
+        <td>{{ i + 1 }}</td>
+  
+        <td>{{ item.product_name }}</td>
+  
+        <td>{{ item.product_description }}</td>
+        <td>{{ item.product_price }}</td>
+  
+        <td>{{ item.customer_name }}</td>
+        <td>{{ item.customer_address }}</td>
+        <td>{{ item.customer_mobile }}</td>
+        <td>{{ item.product_interest }}</td>
+        <td>
+          <a [routerLink]="['/AdminMaster/ConfirmDelivery', item.product_id]">Confirm Delivery</a>
+        </td>
+      
+      </tr>
+    </table>
+  </div>
+  
