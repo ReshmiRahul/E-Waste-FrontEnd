@@ -75,7 +75,7 @@
 
       <div class="form-outline flex-fill mb-0">
 
-        <input type="date" id="form3Example1c" formControlName="dates" placeholder="Select Date"  class="form-control" />
+        <input type="date" id="form3Example1c" formControlName="dates" placeholder="Select Date" [(ngModel)]="dates" [value]="today | date:'yyyy-MM-dd'"  class="form-control" readonly />
        
       </div>
 

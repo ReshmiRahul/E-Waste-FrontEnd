@@ -1,4 +1,6 @@
-<h1 >PENDING COMPLAINTS </h1>
+<br>
+<br>
+<h1>FOOD-WASTE REQUESTS</h1>
 <br>
 <br>
 <br>
@@ -12,12 +14,10 @@
     
         <th>Customer Mobile</th>
     
-          <th>Complaint Subject</th>
-    
-          <th>Complaint Description</th>
-          <th>Date</th>
+          <th>Amount Paid</th>
+    <th>Date</th>
 
-          <th>Status</th>
+        
     
          
         </thead>
@@ -30,14 +30,8 @@
           <td>{{ item.customer_district }}</td>
          
     
-          <td>{{ item.customer_mobile }}</td>
-          <td>{{ item.complaint_topic }}</td>
-    
-    
-          <td>{{ item.complaint_description }}</td>
+          <td>{{ item.customer_phone }}</td>
+          <td>{{ item.fud_pay}}</td>
           <td>{{item.dates}}</td>
-
-          <td>{{item.complaint_status}}</td>
-    
         </tr>
       </table>

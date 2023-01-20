@@ -15,6 +15,8 @@
           <th>Type of Ewaste</th>
     
           <th>Ewaste Description</th>
+          <th>Date</th>
+
         
           <th>Update Status</th>
          
@@ -32,6 +34,8 @@
           <td>{{ item.ewaste_type}}</td>
     
           <td>{{ item.ewaste_description }}</td>
+          <td>{{item.dates}}</td>
+
           <td>
           <a [routerLink]="['/AgencyMaster/UpdateDustbin', item.ewaste_id]">Clear Dustbin</a></td>
          

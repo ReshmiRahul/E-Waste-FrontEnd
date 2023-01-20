@@ -9,8 +9,12 @@ import { BackEndServiceService } from 'src/app/back-end-service.service';
 })
 export class CustomerComplaintPortalComponent {
   submitted=false;
+  dates: string;
+  today: Date = new Date();
+  constructor(private fb: FormBuilder,private backendservice: BackEndServiceService) {
+  this.dates = this.today.toISOString().slice(0,10);
 
-  constructor(private fb: FormBuilder,private backendservice: BackEndServiceService) { }
+   }
  CompRegForm=this.fb.group({
  customer_name:localStorage.getItem('customer_name'),
  customer_district:localStorage.getItem('customer_district'),

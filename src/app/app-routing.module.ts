@@ -15,15 +15,18 @@ import { UpdateagencyComponent } from './Admin/updateagency/updateagency.compone
 import { ViewAgencyComponent } from './Admin/view-agency/view-agency.component';
 import { ViewCustomerComplaintsComponent } from './Admin/view-customer-complaints/view-customer-complaints.component';
 import { ViewCustomerComponent } from './Admin/view-customer/view-customer.component';
+import { ViewFoodwastesComponent } from './Admin/view-foodwastes/view-foodwastes.component';
 import { ViewIntersetedProductsComponent } from './Admin/view-interseted-products/view-interseted-products.component';
 import { ViewProductsComponent } from './Admin/view-products/view-products.component';
 import { AgencyHomeComponent } from './Agency/agency-home/agency-home.component';
 import { AgencyMasterComponent } from './Agency/agency-master/agency-master.component';
 import { CustomerComplaintsComponent } from './Agency/customer-complaints/customer-complaints.component';
+import { DeleteFoodWasteComponent } from './Agency/delete-food-waste/delete-food-waste.component';
 import { DeleteProfileComponent } from './Agency/delete-profile/delete-profile.component';
 import { EditAgencyComponent } from './Agency/edit-agency/edit-agency.component';
 import { UpdateDustbinComponent } from './Agency/update-dustbin/update-dustbin.component';
 import { UpdateProfileComponent } from './Agency/update-profile/update-profile.component';
+import { ViewFoodWasteComponent } from './Agency/view-food-waste/view-food-waste.component';
 import { ViewMyCustomerComplaintsComponent } from './Agency/view-my-customer-complaints/view-my-customer-complaints.component';
 import { ViewMyCustomerRequestsComponent } from './Agency/view-my-customer-requests/view-my-customer-requests.component';
 import { ViewMyCustomerComponent } from './Agency/view-my-customer/view-my-customer.component';
@@ -40,7 +43,10 @@ import { CustomerHomeComponent } from './Customer/customer-home/customer-home.co
 import { CustomerMasterComponent } from './Customer/customer-master/customer-master.component';
 import { CustomerProfileComponent } from './Customer/customer-profile/customer-profile.component';
 import { EditMyProfileComponent } from './Customer/edit-my-profile/edit-my-profile.component';
+import { FoodWasteRequestComponent } from './Customer/food-waste-request/food-waste-request.component';
+import { FoodWasteComponent } from './Customer/food-waste/food-waste.component';
 import { ProductViewComponent } from './Customer/product-view/product-view.component';
+import { RegisterFoodWasteComponent } from './Customer/register-food-waste/register-food-waste.component';
 import { ShowInterestComponent } from './Customer/show-interest/show-interest.component';
 import { ViewMyAgencyComponent } from './Customer/view-my-agency/view-my-agency.component';
 import { ViewcustomerprofileComponent } from './Customer/viewcustomerprofile/viewcustomerprofile.component';
@@ -76,7 +82,9 @@ path: 'AgencyMaster', component: AgencyMasterComponent,
       {path: 'ViewProductDetails', component: ViewProductDetailsComponent},  
       {path: 'ViewMyCustomerRequests', component: ViewMyCustomerRequestsComponent},  
       {path: 'ViewMyCustomerComplaints', component: ViewMyCustomerComplaintsComponent},      
-      {path: 'UpdateDustbin/:id', component: UpdateDustbinComponent},      
+      {path: 'UpdateDustbin/:id', component: UpdateDustbinComponent},   
+      {path: 'ViewFoodWaste', component: ViewFoodWasteComponent},
+      {path: 'DeleteFoodWaste/:id', component: DeleteFoodWasteComponent}
    ]
 },
 //Guest Page
@@ -118,6 +126,7 @@ children: // all the below 3 are setting as children of home.
       { path: 'AgencyRegistration', component:AgencyRegistrationComponent},
       {path:'DeleteCustomer/:id',component:DeleteCustomerComponent},
       {path:'updateagency/:id',component:UpdateagencyComponent},
+      {path: 'ViewFoodWastes', component: ViewFoodwastesComponent}
 
     ]
 },
@@ -146,14 +155,10 @@ children: // all the below 3 are setting as children of home.
 
       {path: 'CancelRequest', component: CancelRequestComponent},
       {path: 'CancelDustbin/:id', component: CancelDustbinComponent},
-      {path: 'EditMyProfile/:id', component: EditMyProfileComponent}
-
-
-
-
-      
-
-
+      {path: 'EditMyProfile/:id', component: EditMyProfileComponent},
+      {path: 'FoodWasteRegister', component: FoodWasteRequestComponent},
+      {path: 'RegisterFood', component: RegisterFoodWasteComponent},
+      {path: 'Foodwaste', component: FoodWasteComponent}
     ]
 },
 { path: 'ViewProfile/:id', component: ViewProfileComponent },

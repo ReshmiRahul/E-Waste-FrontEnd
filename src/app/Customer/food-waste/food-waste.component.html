@@ -7,9 +7,9 @@
               <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
   
-                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Dustbin Box</p>
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">FOOD WASTE REGISTRATION</p>
   
-<form [formGroup]='DustbinRegForm' class="mx-1 mx-md-4">
+<form [formGroup]='foodRegForm' class="mx-1 mx-md-4">
     
    
 
@@ -39,39 +39,13 @@
 
       <div class="form-outline flex-fill mb-0">
 
-        <input type="text" id="form3Example1c" formControlName="ewaste_type" placeholder="Type of ewaste"  class="form-control" />
-        <div *ngIf="submitted&&DustbinRegForm.controls.ewaste_type.errors" class="text-danger">
-
-          <div *ngIf="submitted&&DustbinRegForm.controls.ewaste_type.errors.required">
-  
-              Enter Type of E-waste
-  
-          </div>
-  
-      </div>
+     Amount :  1500
+       
       </div>
 
     </div>
 
-    <div class="d-flex flex-row align-items-center mb-4">
-
-      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-
-      <div class="form-outline flex-fill mb-0">
-
-        <textarea height="50px" id="form3Example3c" formControlName="ewaste_description" placeholder="Enter Description" class="form-control"></textarea>
-        <div *ngIf="submitted&&DustbinRegForm.controls.ewaste_description.errors" class="text-danger">
-
-          <div *ngIf="submitted&&DustbinRegForm.controls.ewaste_description.errors.required">
-  
-              Enter Description
-  
-          </div>
-  
-      </div>
-      </div>
-
-    </div>
+   
 
     <div class="d-flex flex-row align-items-center mb-4">
 
@@ -85,17 +59,13 @@
 
     </div>
 
-      <div class="form-outline flex-fill mb-0" hidden>
-
-        <textarea height="50px" id="form3Example3c" formControlName="ewaste_status" placeholder="Enter Complaint" class="form-control"></textarea>
-
-      </div>
+    
 
                  
 
     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
 
-      <button type="submit" (click)="OnSubmit()" class="btn btn-primary btn-lg">Register E-waste Request</button>
+      <button type="submit" (click)="OnSubmit()" class="btn btn-primary btn-lg">Register Food-Waste Request</button>
 
     </div>
 
@@ -103,7 +73,7 @@
 </div>
 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-  <img src="https://media.istockphoto.com/vectors/computer-recycling-vector-id165962004?k=6&m=165962004&s=170667a&w=0&h=bweqYTzkPeF5ntJiDM3wowstDEJd6qAt1h2B9N3DYxQ="
+  <img src="https://croplife.org/wp-content/uploads/2020/04/food-waste-rubbish-1024x683.jpg"
     class="img-fluid" alt="Sample image">
 
 </div>
@@ -114,6 +84,6 @@
 </div>
 </div>
 <div ng-bind-html="bind"></div>
-<p><marquee speed="1000"><h4>We will clear your Dustbin with in 24hours......For more details, please feel free to reach as via e-mail, facebook or whatsapp....</h4></marquee></p>;
+<p><marquee speed="1000"><h4>We will clear your Dustbin in Monday,Wednesday and Saturday......For more details, please feel free to reach as via e-mail, facebook or whatsapp....</h4></marquee></p>;
 </div>
 </section>

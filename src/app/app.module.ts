@@ -62,6 +62,12 @@ import { CancelRequestComponent } from './Customer/cancel-request/cancel-request
 import { CancelDustbinComponent } from './Customer/cancel-dustbin/cancel-dustbin.component';
 import { UpdateagencyComponent } from './Admin/updateagency/updateagency.component';
 import { EditMyProfileComponent } from './Customer/edit-my-profile/edit-my-profile.component';
+import { FoodWasteRequestComponent } from './Customer/food-waste-request/food-waste-request.component';
+import { RegisterFoodWasteComponent } from './Customer/register-food-waste/register-food-waste.component';
+import { FoodWasteComponent } from './Customer/food-waste/food-waste.component';
+import { ViewFoodWasteComponent } from './Agency/view-food-waste/view-food-waste.component';
+import { ViewFoodwastesComponent } from './Admin/view-foodwastes/view-foodwastes.component';
+import { DeleteFoodWasteComponent } from './Agency/delete-food-waste/delete-food-waste.component';
 
 
 @NgModule({
@@ -124,6 +130,12 @@ import { EditMyProfileComponent } from './Customer/edit-my-profile/edit-my-profi
     CancelDustbinComponent,
     UpdateagencyComponent,
     EditMyProfileComponent,
+    FoodWasteRequestComponent,
+    RegisterFoodWasteComponent,
+    FoodWasteComponent,
+    ViewFoodWasteComponent,
+    ViewFoodwastesComponent,
+    DeleteFoodWasteComponent,
    
 
    

@@ -5,20 +5,28 @@
             <form [formGroup]="EditEwasteForm">
                 Total Kilo
                 <div class="form-group">
-                    <input type="text" formControlName="ewaste_kilo" class="form-control"  />
+                    <input type="text" formControlName="ewaste_kilo" [(ngModel)]="ewaste_kilo" class="form-control"  />
                 </div>
                 <br>
                 Per Kilo Rs
 
                 <div class="form-group">
-                    <input type="text" formControlName="ewaste_perkilo_Rs" class="form-control"  />
+                    <input type="text" formControlName="ewaste_perkilo_Rs" [(ngModel)]="ewaste_perkilo_Rs" class="form-control"  />
                 </div>
                 <br>
-                Total Amount Paid
+                <div class="form-group">
+                    
+                    <button type="submit" (click)="calculateTotal()" class="btn btn-danger" rounded="true">Calculate Total</button>
+
+                </div>
+                <br>
+                Total
 
                 <div class="form-group">
-                    <input type="text" formControlName="ewaste_wallet" class="form-control"  />
+      <input type="text" formControlName="ewaste_wallet" [(ngModel)]="ewaste_wallet" class="form-control"  readonly/>
                 </div>
+                <br>
+              
                 <br>
                 Status
                 <div class="form-group">
@@ -33,6 +41,7 @@
                 <div class="form-group">
                     <br>
                     <button type="submit" (click)="onSubmit()" class="btn btn-danger" rounded="true">Update Dustbin</button>
+
                 </div>
             </form>
         </div>

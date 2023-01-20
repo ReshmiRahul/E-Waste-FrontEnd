@@ -25,7 +25,9 @@ export class BackEndServiceService {
 
    
 }
-
+insertFoodWaste(data: any) {
+  this.http.post("https://localhost:7124/api/foodwaste/insertFoodWaste",data).toPromise().then(result => {alert("Registered Successfully!"),window.location.href='/CustomerMaster/Foodwaste'}) 
+}
 
   insertCustomer(data: any) {
     this.http.post("https://localhost:7124/api/Customer/insertCustomer",data).toPromise().then(result => {alert("Registered Successfully!"),window.location.href='/GuestMaster/CustomerRegistration'}) 
@@ -51,6 +53,11 @@ return this.http.get("https://localhost:7124/api/Agency_login/GetCustomerId?user
       return this.http.get<any>('https://localhost:7124/api/Product/ViewProduct')
       
       }
+      viewfoodwaste() {
+
+        return this.http.get<any>('https://localhost:7124/api/foodwaste/viewfoodwaste')
+        
+        }
       ViewInterestedProduct() {
 
         return this.http.get<any>('https://localhost:7124/api/Product/ViewInterestedProduct')
@@ -117,6 +124,12 @@ return this.http.get("https://localhost:7124/api/Agency_login/GetCustomerId?user
           return this.http.get<any>('https://localhost:7124/api/Agency/ViewMyCustomerRequests?id='+aid)
           
           }
+          
+          ViewMyCustomerFoodWasteRequests(aid:any) {
+
+          return this.http.get<any>('https://localhost:7124/api/Agency/ViewMyCustomerFoodWasteRequests?id='+aid)
+          
+          }
           ViewMyCustomerComplaints(aid:any) {
 
             return this.http.get<any>('https://localhost:7124/api/Agency/ViewMyCustomerComplaints?id='+aid)
@@ -143,6 +156,10 @@ return this.http.get("https://localhost:7124/api/Agency_login/GetCustomerId?user
       {
        return this.http.get<any>('https://localhost:7124/api/Complaint/ViewComplaintsByid/'+ agency_id)
      }
+     ViewfoodwasteByid(fud_id: any) 
+     {
+      return this.http.get<any>('https://localhost:7124/api/foodwaste/ViewfoodwasteByid/'+ fud_id)
+    }
      UpdateAgency(data:any)
    
    {
@@ -161,6 +178,12 @@ return this.http.get("https://localhost:7124/api/Agency_login/GetCustomerId?user
        
          this.http.post('https://localhost:7124/api/Ewaste/updateDustbin',data).toPromise().then(result => {alert("Updated Successfully!"),window.location.href='/AgencyMaster/ViewMyCustomerRequests'})
            }
+           updateDustbinss(data:any)
+   
+           {
+           
+             this.http.post('https://localhost:7124/api/Ewaste/updateDustbin',data).toPromise().then(result => {alert("Updated Successfully!")})
+               }
            UpdateDustbins(data:any)
    
            {
@@ -215,6 +238,12 @@ return this.http.get("https://localhost:7124/api/Agency_login/GetCustomerId?user
            
              this.http.post('https://localhost:7124/api/Customer/deleteCustomer',data).toPromise().then(result => {alert("Deleted Successfully!"),window.location.href='/AdminMaster/viewcustomer'})
                }
+               deleteFoodwaste(data:any)
+   
+               {
+               
+                 this.http.post('https://localhost:7124/api/foodwaste/deleteFoodwaste',data).toPromise().then(result => {alert("Deleted Successfully!"),window.location.href='/AgencyMaster/ViewFoodWaste'})
+                   }
            DeleteProduct(data:any)
    
            {

@@ -9,8 +9,13 @@ import { BackEndServiceService } from 'src/app/back-end-service.service';
 })
 export class DustbinRegistrationComponent {
   submitted=false;
+  dates: string;
+today: Date = new Date();
 
-  constructor(private fb: FormBuilder,private backendservice: BackEndServiceService) { }
+  constructor(private fb: FormBuilder,private backendservice: BackEndServiceService) {
+  this.dates = this.today.toISOString().slice(0,10);
+    
+   }
   DustbinRegForm=this.fb.group({
     customer_id:localStorage.getItem('customer_id'),
  customer_name:localStorage.getItem('customer_name'),
@@ -21,7 +26,8 @@ export class DustbinRegistrationComponent {
  ewaste_description:['',Validators.required],
  dates:[''],
 
- ewaste_status:['Not Cleaned']
+ ewaste_status:['Not Cleaned'],
+ 
 })
 OnSubmit()
 {
@@ -32,5 +38,6 @@ OnSubmit()
 console.log(this.DustbinRegForm.value)
 this.backendservice.insertEwaste(this.DustbinRegForm.value)
 }
-ngOnInit():void{}
+ngOnInit():void{
+}
 }

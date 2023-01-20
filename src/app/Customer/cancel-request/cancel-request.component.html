@@ -16,7 +16,8 @@
           <th>Type of Ewaste</th>
     
           <th>Ewaste Description</th>
-          
+          <th>Date</th>
+
           <th>Cancel</th>
         
     
@@ -29,6 +30,8 @@
           <td>{{ item.ewaste_type}}</td>
     
           <td>{{ item.ewaste_description }}</td>
+          <td>{{item.dates}}</td>
+
           <td>
             <a [routerLink]="['/CustomerMaster/CancelDustbin', item.ewaste_id]">Cancel Request</a></td>
     

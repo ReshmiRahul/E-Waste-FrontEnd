@@ -24,7 +24,7 @@ export class SolveComplaintsComponent implements OnInit {
       customer_district: [''],
       customer_mobile: [''],
       customer_id:[''],
-    
+    dates:[''],
       complaint_topic: [''],
       complaint_description:[''],
       complaint_status:[''],
@@ -45,7 +45,8 @@ export class SolveComplaintsComponent implements OnInit {
         customer_mobile: data.customer_mobile,
         complaint_topic: data.complaint_topic,
         complaint_description:data.complaint_description,
-        complaint_status:data.complaint_status
+        complaint_status:data.complaint_status,
+        dates:data.dates
          
        });
          
